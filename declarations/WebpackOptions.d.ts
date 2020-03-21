@@ -19,11 +19,14 @@ export type Bail = boolean;
 /**
  * Cache generated modules and chunks to improve performance for multiple incremental builds.
  */
-export type Cache = true | CacheNormalized;
+export type CacheOptions = true | CacheOptionsNormalized;
 /**
  * Cache generated modules and chunks to improve performance for multiple incremental builds.
  */
-export type CacheNormalized = false | MemoryCacheOptions | FileCacheOptions;
+export type CacheOptionsNormalized =
+	| false
+	| MemoryCacheOptions
+	| FileCacheOptions;
 /**
  * The base directory (absolute path!) for resolving the `entry` option. If `output.pathinfo` is set, the included pathinfo is shortened to this directory.
  */
@@ -555,7 +558,7 @@ export interface WebpackOptions {
 	/**
 	 * Cache generated modules and chunks to improve performance for multiple incremental builds.
 	 */
-	cache?: Cache;
+	cache?: CacheOptions;
 	/**
 	 * The base directory (absolute path!) for resolving the `entry` option. If `output.pathinfo` is set, the included pathinfo is shortened to this directory.
 	 */
@@ -603,7 +606,7 @@ export interface WebpackOptions {
 	/**
 	 * Options affecting the normal modules (`NormalModuleFactory`).
 	 */
-	module?: Module;
+	module?: ModuleOptions;
 	/**
 	 * Name of the configuration. Used when loading multiple configurations.
 	 */
@@ -906,7 +909,7 @@ export interface Loader {
 /**
  * Options affecting the normal modules (`NormalModuleFactory`).
  */
-export interface Module {
+export interface ModuleOptions {
 	/**
 	 * An array of rules applied by default for modules.
 	 */
@@ -2096,7 +2099,7 @@ export interface WebpackOptionsNormalized {
 	/**
 	 * Cache generated modules and chunks to improve performance for multiple incremental builds.
 	 */
-	cache: CacheNormalized;
+	cache: CacheOptionsNormalized;
 	/**
 	 * The base directory (absolute path!) for resolving the `entry` option. If `output.pathinfo` is set, the included pathinfo is shortened to this directory.
 	 */
@@ -2144,7 +2147,7 @@ export interface WebpackOptionsNormalized {
 	/**
 	 * Options affecting the normal modules (`NormalModuleFactory`).
 	 */
-	module: Module;
+	module: ModuleOptions;
 	/**
 	 * Name of the configuration. Used when loading multiple configurations.
 	 */

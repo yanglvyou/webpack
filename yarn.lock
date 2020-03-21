@@ -4054,7 +4054,7 @@ json-schema-ref-parser@^6.1.0:
     js-yaml "^3.12.1"
     ono "^4.0.11"
 
-json-schema-to-typescript@^8.1.0:
+json-schema-to-typescript@^8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/json-schema-to-typescript/-/json-schema-to-typescript-8.2.0.tgz#a859f836df89db63c5f17a6c9c2f1dea93e8dd9b"
   integrity sha512-yvi4v9oLeJzJCktt+Zta6kOgEu8R93gNMZUJYo83aAPxoG0qB+cXIxVg5xa6gmdNkyffjH9Ebw1rvyaJKIor5A==
@@ -6611,6 +6611,16 @@ toml@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/toml/-/toml-3.0.0.tgz#342160f1af1904ec9d204d03a5d61222d762c5ee"
   integrity sha512-y/mWCZinnvxjTKYhJ+pYxwD0mRLVvOtdS2Awbgxln6iEnt4rk0yBxeSBHkGJcPucRiG0e55mwWp+g/05rsrd6w==
+
+tooling@webpack/tooling:
+  version "1.0.0"
+  resolved "https://codeload.github.com/webpack/tooling/tar.gz/ec2711bc275d1c28402482ea974fb0a7ce4d9d8b"
+  dependencies:
+    "@yarnpkg/lockfile" "^1.1.0"
+    commondir "^1.0.1"
+    glob "^7.1.6"
+    json-schema-to-typescript "^8.2.0"
+    yargs "^15.3.1"
 
 tough-cookie@^2.3.3:
   version "2.5.0"
